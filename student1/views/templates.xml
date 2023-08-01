@@ -1,24 +1,20 @@
 <odoo>
-    <data>
-<!--
-        <template id="listing">
-          <ul>
-            <li t-foreach="objects" t-as="object">
-              <a t-attf-href="#{ root }/objects/#{ object.id }">
-                <t t-esc="object.display_name"/>
-              </a>
-            </li>
-          </ul>
-        </template>
-        <template id="object">
-          <h1><t t-esc="object.display_name"/></h1>
-          <dl>
-            <t t-foreach="object._fields" t-as="field">
-              <dt><t t-esc="field"/></dt>
-              <dd><t t-esc="object[field]"/></dd>
-            </t>
-          </dl>
-        </template>
--->
-    </data>
+  <data>
+    <menuitem
+            id="student_menu_root"
+            name="STUDENT"
+            sequence="1"/>
+    <menuitem
+            id="student_menu"
+            name="Student"
+            action="student_view_action"
+            parent="student_menu_root"
+            sequence="1"/>
+    <menuitem
+            id="teacher_menu"
+            name="Teacher"
+            action="teacher_view_action"
+            parent="student_menu_root"
+            sequence="2"/>
+  </data>
 </odoo>

@@ -1,17 +1,17 @@
 <odoo>
     <data>
-        <record id="student_view_action" model="ir.actions.act_window">
-            <field name="name">Student</field>
-            <field name="res_model">schl.student</field>
+        <record id="teacher_view_action" model="ir.actions.act_window">
+            <field name="name">Teacher</field>
+            <field name="res_model">schl.teacher</field>
             <field name="view_mode">form,tree</field>
             <field name="help" type="html">
-                <h3>Create New Student</h3>
+                <h3>Create Teacher</h3>
             </field>
         </record>
 
-        <record id="student_form_view" model="ir.ui.view">
-            <field name="name">student.form</field>
-            <field name="model">schl.student</field>
+        <record id="teacher_form_view" model="ir.ui.view">
+            <field name="name">teacher.form</field>
+            <field name="model">schl.teacher</field>
             <field name="arch" type="xml">
                 <form>
                     <sheet>
