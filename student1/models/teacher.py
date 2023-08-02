@@ -7,3 +7,4 @@ class Teacher(models.Model):
     name = fields.Char(string="Name")
     age = fields.Char(string="Age")
     cls = fields.Char(string="Class")
+    place = fields.Char(string="Place")

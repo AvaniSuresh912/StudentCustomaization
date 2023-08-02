@@ -3,9 +3,9 @@
         <record id="teacher_view_action" model="ir.actions.act_window">
             <field name="name">Teacher</field>
             <field name="res_model">schl.teacher</field>
-            <field name="view_mode">form,tree</field>
+            <field name="view_mode">tree,form</field>
             <field name="help" type="html">
-                <h3>Create Teacher</h3>
+                <h3 class="o_empty_page o_view_nocontent_smiling_face">Create Teacher</h3>
             </field>
         </record>
 
@@ -19,9 +19,24 @@
                             <field name="name"/>
                             <field name="age"/>
                             <field name="cls"/>
+                    <field name="place"/>
+
                         </group>
                     </sheet>
                 </form>
+            </field>
+        </record>
+
+        <record id="teacher_tree_view" model="ir.ui.view">
+            <field name="name">teacher.tree</field>
+            <field name="model">schl.teacher</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="age"/>
+                    <field name="cls"/>
+                    <field name="place"/>
+                </tree>
             </field>
         </record>
 
